@@ -55,12 +55,49 @@ const user = [
         name:"bddd"
     }
 ]
-console.log(user[1].id);
-console.log(tinderuser);
-console.log(Object.keys(tinderuser));//important ye humare obj ka keys return karta or iska data type rehta hai array so hume bohto easy hota opration karne ke liye jese hum loop laga kar sabko access karle ye basically easy hojata hai fir
+// console.log(user[1].id);
+// console.log(tinderuser);
+// console.log(Object.keys(tinderuser));//important ye humare obj ka keys return karta or iska data type rehta hai array so hume bohto easy hota opration karne ke liye jese hum loop laga kar sabko access karle ye basically easy hojata hai fir
 //isme object ke baad jo chaiye vo likhna hota hai or ye object ko nh pata hota hai ki kis object me se ye sab value lani isliye hume object name dena hota bracket me ++++++ project ke kam aata hai database me kam aata hai
-console.log(Object.values(tinderuser));// ye tarika hai values ko access karna or array me values return hoti hai bohot kam aata hai ye aage high level pe ye kam aata hai
+// console.log(Object.values(tinderuser));// ye tarika hai values ko access karna or array me values return hoti hai bohot kam aata hai ye aage high level pe ye kam aata hai
 
-console.log(Object.entries(tinderuser));// ye bohot kam aata hai par sikh lete hai ye ky karta har key value pair ko ek array me dal deta hai or sab key value pair array ek main array ke ander rehte hai
+// console.log(Object.entries(tinderuser));// ye bohot kam aata hai par sikh lete hai ye ky karta har key value pair ko ek array me dal deta hai or sab key value pair array ek main array ke ander rehte hai
 
-console.log(tinderuser.hasOwnProperty('isLoggedIn'));// ye hum check karke ke batata hai vo poperty hai ya nh boolean value return karta hai (agr nh pata hai property hai ya nh is method use karke pata karo or use karo method )
+// console.log(tinderuser.hasOwnProperty('isLoggedIn'));// ye hum check karke ke batata hai vo poperty hai ya nh boolean value return karta hai (agr nh pata hai property hai ya nh is method use karke pata karo or use karo method )
+
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+const course ={
+    courseName:"Javascript",
+    courseprice:"999",
+    coursestudentName:"Ayush",
+}
+
+// course.price //ye bohot complex kar deta hai code barbar ek chiz likkha key dot key dot isse acha tarika hai de-struture code bhi clean or acha se samjh bhi aata hai
+
+const {coursestudentName:studentName,courseprice:price,courseName} = course // isko bolte hai de-structure mltb hum object de-structure kare use kar sakte or isme ese bhi kar sakte hai agr koi object ki key ki value bohot badi hai to usko short me karke use kar sakte hai is basically reference deta hai hai keys ka 
+// ye bohot usefull hai react ke liye or ye use karne se code clean rehta hai jese ke dekh sakte hai 
+// example of react code --
+// const navbar ({company}) =>{--syntax dekh kar pata chal jana chiaiye idher de-structure ho rahi hai {}yehi line iska syntax hai.... 
+//ye react ka code hai isse hume pata chal raha hai hum de-struture kaha or kese use karenge react me udher hum thoda advance rehna hota hai udher itna detail me kuch nh jayega 
+// }udher direct use kar lenege jese dekh sakte hai curle barcecs me company likha udher ese hi use kar denge react ese hi hogi de-struturing
+// navbar(company="Ayush")--
+console.log(studentName,price,courseName);
+
+
+// {
+//     "Name":"Ayush",
+//     "course":"js",// this json format jo api se mostly data aata isse formate me aata hai
+//     "price":890,
+// }
+
+//data array or object formate me aata hai {},[]like this
+// [
+//     {},
+//     {},
+//     {}
+// ]
